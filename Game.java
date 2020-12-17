@@ -27,9 +27,6 @@ class Game{
 			
 			parametersUser[i] = random.nextInt(10);
 			
-			
-
-			
 		}
 		System.out.println("\n体力は"  + (parametersUser[hitpoint]+1));
 		System.out.println("攻撃力は"  + (parametersUser[attack]+1));
@@ -38,6 +35,22 @@ class Game{
 		System.out.println("特防は"  + (parametersUser[magicdefence]+1));
 		/*終わり*/
 		
+		int riku=0,kyon=1,hibiki=2,karen=3,nozomi=4;
+		
+		int[][] enemy=new int[5][5];
+		/*列が敵の名前になります。
+		行がそれぞれのパラメーターになります。*/
+		for(int i=0;i<=4;i++){
+			for(int j=0;j<=4;j++){
+				Random randomEnemy=new Random();
+				enemy[i][j]=randomEnemy.nextInt(10);
+			}
+			
+		}
+		
+		for(int i=0;i<=4;i++){
+			System.out.print(enemy[0][i]);
+		}
 		
 		
 
