@@ -1,11 +1,12 @@
 import java.util.*;
-import constants.Constants;
+import constants.Constants.*;
+import sortofenemy.Enemy;
+import sortofenemy.Enemy.*;
 
 class Game{
 	public static void main(String []args){
 
-		System.out.println(constants.Constants.speed_index);
-
+		
 
 		// 定義
         int enemy_size = 5;
@@ -15,6 +16,9 @@ class Game{
 		//敵の定義
 		int riku=0,kyon=1,hibiki=2,karen=3,nozomi=4;
 
+		Enemy c = new Enemy();
+
+		c.enemyName();
 
 
 		Scanner scan=new Scanner(System.in);
@@ -54,6 +58,9 @@ class Game{
 		
 		int user[][] = makeArray(1,parameter_size);
 		printMatrix(user,1,parameter_size);
+
+		
+
 		
 	}
 
@@ -94,5 +101,13 @@ class Game{
 			}
 			System.out.println("");
 		}
+
+
 	}
+
+
+
+
+	
+
 }
