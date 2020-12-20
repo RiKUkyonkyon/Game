@@ -3,6 +3,8 @@ import java.util.*;
 class Game{
 	public static void main(String []args){
 
+		//ちんこ
+
 		// 定義
         int enemy_size = 5;
         //enemy_sizeは敵の数を定義した。
