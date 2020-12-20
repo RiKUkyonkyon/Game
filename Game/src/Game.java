@@ -1,19 +1,8 @@
 import java.util.*;
-import constants.Constants;
+import static constants.Constants.*;
 
 class Game{
 	public static void main(String []args){
-
-		System.out.println(constants.Constants.speed_index);
-
-
-		// 定義
-        int enemy_size = 5;
-		int parameter_size = 6;
-		/*パラメータ生成*/
-		
-		//敵の定義
-		int riku=0,kyon=1,hibiki=2,karen=3,nozomi=4;
 
 
 
@@ -95,4 +84,10 @@ class Game{
 			System.out.println("");
 		}
 	}
+
+	static int calcDamage(int[][] array,int player[][] int enemy_number){
+		array[enemy_number][hitpoint_index] = array[enemy_number][hitpoint_index] - array[][]
+
+		return 0;
+	} 
 }
