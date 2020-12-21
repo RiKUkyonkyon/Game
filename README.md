@@ -2,7 +2,7 @@
 
 ## Member  
 
-Rikukyonkyon : りく　　
+Rikukyonkyon : りく  
 C20064160 : きょういち
 
 
