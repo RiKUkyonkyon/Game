@@ -5,7 +5,7 @@ import enemy.Enemy;
 class Game{
 	public static void main(String []args){
 
-		System.out.println();
+		System.out.println("陳子");
 
 		Enemy e = new Enemy();
 
@@ -13,7 +13,7 @@ class Game{
 
 
 
-		Scanner scan=new Scanner(System.in);
+		Scanner scan=new java.util.Scanner(System.in);
 	
 		/*ここから導入*/
 		System.out.println("\nランダム＆ドラゴンズの世界にようこそ！");
@@ -43,12 +43,16 @@ class Game{
 		/*終わり*/
 		
 		
-		int enemy[][] = e.makeArray(enemy_size, parameter_size); //敵の情報を取得
+		int enemy[][] = e.makeMatrix(enemy_size, parameter_size,enemy_rand_min,enemy_rand_max); //敵の情報を取得
 		e.printMatrix(enemy, enemy_size, parameter_size); //敵の情報を仮に表示
 		
 		System.out.print("\n");
 		
-		int user[][] = e.makeArray(1,parameter_size);
+		int user[][] = e.makeMatrix(1,parameter_size,30,50);
 		e.printMatrix(user,1,parameter_size);	
+
+		scan.close();
 	}
+
+
 }
