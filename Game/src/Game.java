@@ -48,6 +48,7 @@ class Game{
 		
 		System.out.print("\n");
 		
+
 		int user[][] = e.makeMatrix(1,parameter_size,30,50);
 		e.printMatrix(user,1,parameter_size);	
 
