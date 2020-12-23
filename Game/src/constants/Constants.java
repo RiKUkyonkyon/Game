@@ -22,5 +22,8 @@ public class Constants {
 
 		public static int enemy_size = 5; // 敵の種類
 		public static int parameter_size = 6; //パラメータの数
+
+		public static int enemy_rand_min=30; // 敵のパラメータの最小値
+		public static int enemy_rand_max = 50; // 敵のパラメータの最大値
 }
 

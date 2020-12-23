@@ -43,14 +43,12 @@ public class Enemy {
     }
     
     /*
-	配列をランダムに初期化するメソッド
+	行列をランダムに初期化するメソッド
 	引数１：行数
 	引数２：列数
 	戻り値：int型2次元配列
 	*/
-	public int[][] makeArray(int row,int column){
-		int rand_min=30;
-		int rand_max = 50;
+	public int[][] makeMatrix(int row,int column,int rand_min,int rand_max){
 		int[][] enemy=new int[row][column];
 		/*列が敵の名前になります。
 		行がそれぞれのパラメーターになります。*/
@@ -62,7 +60,11 @@ public class Enemy {
 		}
 
 		return enemy;
-    }
+	}
+	
+	public int[] makeArray(int size, int rand_min, int rand_max){
+		int[] aray = 
+	}
     /*　作成中
     static int calcDamage(int[][] array,int player[][] int enemy_number){
 		array[enemy_number][hitpoint_index] = array[enemy_number][hitpoint_index] - array[][];

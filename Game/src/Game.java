@@ -5,7 +5,7 @@ import enemy.Enemy;
 class Game{
 	public static void main(String []args){
 
-		System.out.println();
+		System.out.println("陳子");
 
 		Enemy e = new Enemy();
 
@@ -13,7 +13,7 @@ class Game{
 
 
 
-		Scanner scan=new Scanner(System.in);
+		Scanner scan=new java.util.Scanner(System.in);
 	
 		/*ここから導入*/
 		System.out.println("\nランダム＆ドラゴンズの世界にようこそ！");
@@ -43,45 +43,17 @@ class Game{
 		/*終わり*/
 		
 		
-		int enemy[][] = e.makeArray(enemy_size, parameter_size); //敵の情報を取得
+		int enemy[][] = e.makeMatrix(enemy_size, parameter_size,enemy_rand_min,enemy_rand_max); //敵の情報を取得
 		e.printMatrix(enemy, enemy_size, parameter_size); //敵の情報を仮に表示
 		
 		System.out.print("\n");
 		
-<<<<<<< HEAD
-		int user[][] = makeArray(1,parameter_size);
-		printMatrix(user,1,parameter_size);
 
-		
-
-		
-	}
-
-	//ここまでがmainメソッド
-
-	/*
-	配列をランダムに初期化するメソッド
-	引数１：行数
-	引数２：列数
-	戻り値：int型2次元配列
-	*/
-	static int[][] makeArray(int row,int column){
-		int rand_min=30;
-		int rand_max = 50;
-		int[][] enemy=new int[row][column];
-		/*列が敵の名前になります。
-		行がそれぞれのパラメーターになります。*/
-		for(int i=0;i<row;i++){
-			for(int j=0;j<column;j++){
-				Random randomEnemy=new Random();
-				enemy[i][j]=rand_min+randomEnemy.nextInt(rand_max-rand_min);
-			}
-		}
-
-		return enemy;
-=======
-		int user[][] = e.makeArray(1,parameter_size);
+		int user[][] = e.makeMatrix(1,parameter_size,30,50);
 		e.printMatrix(user,1,parameter_size);	
->>>>>>> d1e13b960dbff31809424e3fc4ddcc71039f7f82
+
+		scan.close();
 	}
+
+
 }
