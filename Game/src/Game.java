@@ -1,24 +1,16 @@
 import java.util.*;
-import constants.Constants.*;
-import sortofenemy.Enemy;
-import sortofenemy.Enemy.*;
+import static constants.Constants.*;
+import enemy.Enemy;
 
 class Game{
 	public static void main(String []args){
 
-		
+		System.out.println();
 
-		// 定義
-        int enemy_size = 5;
-		int parameter_size = 6;
-		/*パラメータ生成*/
-		
-		//敵の定義
-		int riku=0,kyon=1,hibiki=2,karen=3,nozomi=4;
+		Enemy e = new Enemy();
 
-		Enemy c = new Enemy();
+		e.enemyName();
 
-		c.enemyName();
 
 
 		Scanner scan=new Scanner(System.in);
@@ -37,7 +29,7 @@ class Game{
 		int[] parametersUser={hitpoint,attack,defence,magic_attack,magic_defence};
 		*/
 		for(int i=0;i<=4;i++){
-			Random random=new Random();
+			// Random random=new Random();
 			/*
 			parametersUser[i] = random.nextInt(10);
 			*/
@@ -51,11 +43,12 @@ class Game{
 		/*終わり*/
 		
 		
-		int enemy[][] = makeArray(enemy_size, parameter_size); //敵の情報を取得
-		printMatrix(enemy, enemy_size, parameter_size); //敵の情報を仮に表示
+		int enemy[][] = e.makeArray(enemy_size, parameter_size); //敵の情報を取得
+		e.printMatrix(enemy, enemy_size, parameter_size); //敵の情報を仮に表示
 		
 		System.out.print("\n");
 		
+<<<<<<< HEAD
 		int user[][] = makeArray(1,parameter_size);
 		printMatrix(user,1,parameter_size);
 
@@ -86,29 +79,9 @@ class Game{
 		}
 
 		return enemy;
+=======
+		int user[][] = e.makeArray(1,parameter_size);
+		e.printMatrix(user,1,parameter_size);	
+>>>>>>> d1e13b960dbff31809424e3fc4ddcc71039f7f82
 	}
-
-	/*
-	(row)行(column)列の配列を行列で表示するメソッド
-	引数１：int型配列
-	引数２：行数
-	引数３：列数
-	戻り値：なし
-	*/
-	static void printMatrix(int[][] array, int row,int column){
-		for(int i=0;i<row;i++){
-			for(int j=0;j<column;j++){
-				System.out.print(array[i][j] + " ");
-			}
-			System.out.println("");
-		}
-
-
-	}
-
-
-
-
-	
-
 }
